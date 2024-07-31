@@ -18,7 +18,8 @@ Satisfied these requirements:
 5-User can see blogs post on an index html page as well  by navigating to  http://127.0.0.1:8000
 6-Documented and tested using Swagger
 
-*you can download it to your local or clone it - ```git clone: https://github.com/paulBit3/blogApi_v1.git```
+You can download it to your local or clone it  ```git clone: https://github.com/paulBit3/blogApi_v1.git```
+
 ------
 
 --- Install Dependencies for the project:

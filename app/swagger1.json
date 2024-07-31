@@ -1,0 +1,434 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Blog API",
+        "description": "A simple Blog API documentation",
+        "version": "1.0.0",
+        "contact": {
+          "name": "paultechnologies",
+          "url": "https://github.com/paulBit3",
+          "email": "paultechnologie@gmail.com"
+        }
+    },
+    "servers": [
+      {
+        "url": "/"
+      }
+    ],
+    "tags": [
+      {
+        "name": "Blog API",
+        "description": "A Simple Blog API"
+      }
+    ],
+    "paths": {
+      "/api/blog/posts": {
+        "get": {
+          "security": {
+         
+          },
+          "tags": [
+            "Blog Posts"
+          ],
+          "summary": "Retrieve all blog posts from the system that the user has access to",
+          "responses": {
+            "200": {
+              "description": "A list of blog posts.",
+              "schema": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "format": "string"
+                    },
+                    "content": {
+                        "type": "string",
+                        "format": "string"
+                    },
+                    "author":{
+                        "type":"string",
+                        "format":"string"
+                    }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/api/blog/post": {
+            "post": {
+             
+              "tags": [
+                  "Blog Posts"
+                ],
+                "summary": "Create a new blog post",
+                "requestBody": {
+                    "description": "Blog Post",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                          "schema": {
+                            "$ref":"#/components/blogPostRequest"
+                          }
+                        }
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "return /You posted!",
+                        "schema": {
+                            "post_id":{
+                                "properties": {
+                                  "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                    "description": "return /Failed. If bad blog post data."
+                    }
+                }
+            }
+      },
+      "/api/blog/post/{post_id}": {
+        "parameters": [
+          {
+            "name": "post_id",
+            "in": "path",
+            "required": true,
+            "description": "Id of the blog post to fetch ",
+            "type": "string"
+          }
+        ],
+        "get": {
+          "tags": [
+            "Blog Posts"
+          ],
+          "summary": "Find a single blog post by ID",
+          "operationId": "find blog post by id",
+          "parameters": [
+            {
+              "name": "post_id",
+              "in": "path",
+              "required": true,
+              "description": "Id of the blog post to fetch ",
+              "schema": {
+                "type":"string",
+                "format":"string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "return /Ok /if blog post found",
+              "schema": {
+                "$ref":"#/components/blogPostRequest"
+              }
+            },
+            "404": {
+              "description": "return /Failed. If blog post not found."
+            }
+          }
+        }
+    },
+    "/api/blog/post/{post_id}/edit": {
+      "parameters": [
+        {
+          "name": "post_id",
+          "in": "path",
+          "required": true,
+          "description": "Blog post id",
+          "type":"string"
+        }
+      ],
+      "put": {
+          "tags": [
+            "Blog Posts"
+          ],
+          "summary": "edit a blog post by ID",
+          "operationId": "update blog post by id",
+          "parameters": [
+            {
+              "name": "post_id",
+              "in": "path",
+              "required": true,
+              "description": "Id of the blog post to fetch ",
+              "schema": {
+                "type":"string",
+                "format":"string"
+              }
+            }
+          ],
+          "requestBody": {
+            "description": "editing blog post",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref":"#/components/blogPostRequest"
+                }
+              }
+            }
+          },
+          "produces": [
+              "application/json"
+          ],
+          "responses": {
+              "200": {
+                  "description": "return/ Successful operation! /If blog post successfully updated"
+              },
+              "400": {
+                  "description": "return/ Failed!/If operation not succeed!"
+              }
+          }
+    }
+    },
+    
+    "/api/blog/post/del/{post_id}": {
+      "delete": {
+        "tags": [
+          "Blog Posts"
+        ],
+        "summary": "Delete a single blog post by ID",
+        "operationId": "delete blog post by id",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "post_id",
+            "required": true,
+            "description": "Blog post Id",
+            "type":"string",
+            "schema": {
+              "type":"string",
+              "format":"string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "return /OK /if blog post deleting successful",
+            "schema": {
+              "type":"string",
+              "format":"string"
+            }
+          },
+          "401": {
+            "description": "return /You can only delete post you created!"
+          },
+          "404": {
+            "description": "return /blog post not found."
+          }
+        }
+      }
+    },
+  "/api/blog/auth/users/login": {
+    "post": {
+      "security": {
+       
+      },      
+      "tags": [
+          "Authentication"
+      ],
+      "summary": "Signin to user account",
+      "requestBody": {
+          "description": "Signin",
+          "required": true,
+          "content": {
+              "application/json": {
+                  "schema": {
+                      "type": "object",
+                      "properties": {
+                          "username": {
+                              "type": "string",
+                              "required":true
+                          },
+                          "password":{
+                              "type": "string",
+                              "format":"password",
+                              "required":true
+                          }
+                      }
+                  }
+              }
+          }
+      },
+      "produces": [
+          "application/json"
+      ],
+      "responses": {
+          "200": {
+              "description": "return/ You are connected! /If user successfully logged in"
+          },
+          "400": {
+              "description": "return/ Wrong credentials! /If the password does not match!"
+          }
+      }
+    }
+  },
+  "/api/blog/auth/users/signup": {
+     "post": {
+      "security": {
+       
+      },
+      "tags": [
+          "Authentication"
+      ],
+      "summary": "Create a new user account",
+      "requestBody": {
+          "description": "Signup",
+          "required": true,
+          "content": {
+              "application/json": {
+                  "schema": {
+                      "type": "object",
+                      "properties": {
+                          "username": {
+                              "type": "string",
+                              "required":true
+                          },
+                          "password":{
+                              "type": "string",
+                              "format":"password",
+                              "required":true
+                          }
+                      }
+                  }
+              }
+          }
+      },
+      "produces": [
+          "application/json"
+      ],
+      "responses": {
+          "201": {
+              "description": "return/ successful account created!"
+          },
+          "400": {
+              "description": "return/ field(s) required/ if Username and/or Password  field(s) empty "
+          },
+          "401": {
+              "description": "return/ failed to create your account!"
+            },
+            "409": {
+            "description": "return/ Username already exist! /if user already exists in the Database"
+          }
+      }
+    }
+  },
+  "/api/blog/auth/users/logout": {
+     "post": {
+      "tags": [
+          "Authentication"
+      ],
+      "summary": "Signout user",
+      "requestBody": {
+          "description": "Signout",
+          "required": true,
+          "content": {
+              "application/json": {
+                  "schema": {
+                      "type": "object",
+                      "properties": {
+                          "username": {
+                              "type": "string",
+                              "required":true
+                          },
+                          "password":{
+                              "type": "string",
+                              "format":"password",
+                              "required":true
+                          }
+                      }
+                  }
+              }
+          }
+      },
+      "produces": [
+          "application/json"
+      ],
+      "responses": {
+          "400": {
+              "description": "return/ There was an error! /if something went wrong."
+          }
+      }
+    }
+  }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "in": "header",
+        "name": "Authorization",
+        "description": "Bearer token to access these api endpoints",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "schemas": {
+      "Post": {
+        "type":"object",
+        "properties": {
+          "post_id":{
+            "type":"string",
+            "format":"string"
+          },
+          "title": {
+            "type":"string",
+            "format":"string",
+            "example":"AI"
+          },
+          "author":{
+            "type":"string",
+            "format":"string"
+          },
+          "content":{
+            "type":"string",
+            "format":"string"
+          },
+          "read_time":{
+            "type":"string",
+            "format":"string"
+          }
+        }
+      },
+      "User": {
+        "properties": {
+          "user_id": {
+            "type": "inteeger",
+            "format": "int64"
+          },
+          "username": {
+            "type":"string",
+            "format":"string"
+          },
+          "password": { 
+            "type":"string",
+            "format":"string"
+          }
+        }
+      }
+    },
+    "blogPostRequest": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "format": "string"
+        },
+        "content": {
+          "type": "string",
+          "format": "string"
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}

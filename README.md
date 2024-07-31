@@ -49,7 +49,6 @@ Authentication Endpoint URI
    http://127.0.0.1:8000/api/blog/auth/users/signup
 
 2- Signin
-
    http://127.0.0.1:8000/api/blog/auth/users/login
 
 3- Sign out or logout

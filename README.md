@@ -79,8 +79,7 @@ Blog Endpoint URI
 --------
 ---- Demo
 --
-A complete project live demo is here: [Complete Demo on postman and others API tool]
-(https://gemoo.com/tools/upload-video/share/676539270156771328?codeId=PYL3aw7BYgQZK&card=676539267866681344)
+A complete project live demo is here: [Complete Demo on postman](https://gemoo.com/tools/upload-video/share/676539270156771328?codeId=PYL3aw7BYgQZK&card=676539267866681344)
 
 A complete demo on Swagger is here: [Complete Demo on Swagger](https://gemoo.com/tools/upload-video/share/677388842189967360?codeId=DGYyn6rz6YKdY&card=677388839774048256)
 

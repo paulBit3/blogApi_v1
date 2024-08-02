@@ -217,12 +217,9 @@ def signup():
 <img width="944" alt="Swagger_screen_2024-07-29 184750" src="https://github.com/user-attachments/assets/f922263b-4a01-469e-ab54-6c126343eff4">
 <img width="925" alt="Swagger_screen_2024-07-29 085547" src="https://github.com/user-attachments/assets/91fd9a9b-343a-4b55-a54d-3f7ef52e65eb">
 <img width="631" alt="Screenshot 2024-07-25 160148" src="https://github.com/user-attachments/assets/45c7640b-4366-448a-a3f7-caf47b79d1e7">
-![Swagger_screen_2024-07-29 085506](https://github.com/user-attachments/assets/bb0c2d6c-81a7-4577-9f05-a896c95637b7)
 <img width="913" alt="Swagger_screen_2024-07-29 080429" src="https://github.com/user-attachments/assets/1fbecfb0-3fb0-42a3-82ad-196845b68f84">
 <img width="883" alt="Screenshot 2024-07-24 095408" src="https://github.com/user-attachments/assets/5149c585-0010-4bc7-b9a0-48243b9ae145">
-
 <img width="910" alt="Screenshot 2024-07-25 230918" src="https://github.com/user-attachments/assets/442d1e3a-9f57-419d-80f7-78049a62fa45">
-![Screenshot 2024-07-24 095333](https://github.com/user-attachments/assets/42f472e2-d1b9-4293-9469-4042b4e499c2)
 <img width="635" alt="Screenshot 2024-07-24 095038" src="https://github.com/user-attachments/assets/532231b3-6aa7-469d-9473-5953b67df9f0">
 <img width="635" alt="Screenshot 2024-07-24 094421" src="https://github.com/user-attachments/assets/27a4ae28-df6a-40d0-a6f8-f22bd6da9d90">
 ![Screenshot 2024-07-24 094357](https://github.com/user-attachments/assets/bd2b5f9f-9b14-4b80-a2e6-a0dd540168ad)
@@ -232,6 +229,6 @@ def signup():
 [Screenshot 2024-07-22 210125](https://github.com/user-attachments/assets/6bc88612-9b0b-46ba-a55c-6aaf670c58b7)
 <img width="936" alt="blog_api_index_2_2024-07-31 160926" src="https://github.com/user-attachments/assets/15335f3f-024d-4312-bced-0afc55e454f6">
 <img width="975" alt="blog_api_index_1_2024-07-31 160814" src="https://github.com/user-attachments/assets/4f319954-97bb-40ad-8d3b-0dbc8d21febe">
-[Screenshot 2024-07-24 095726](https://github.com/user-attachments/assets/e5989e3f-4e0e-406f-a16c-b6753264ebf9)
+
 
 

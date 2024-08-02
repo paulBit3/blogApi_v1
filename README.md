@@ -11,12 +11,12 @@
 ------  
 Satisfied these requirements:
 ---
-1- User login or Create an account to login
-2- User Create, Update, View, and  Delete a post
-3- User Logout
-4- APP display blog post created by user
-5-User can see blogs post on an index html page as well  by navigating to  http://127.0.0.1:8000
-6-Documented and tested using Swagger
+- User login or Create an account to login
+- User Create, Update, View, and  Delete a post
+- User Logout
+- APP display blog post created by user
+-User can see blogs post on an index html page as well  by navigating to  http://127.0.0.1:8000
+-Documented and tested using Swagger
 
 You can download it to your local or clone it  ```git clone: https://github.com/paulBit3/blogApi_v1.git```
 

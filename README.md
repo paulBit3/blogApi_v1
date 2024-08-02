@@ -229,9 +229,9 @@ def signup():
 <img width="635" alt="Screenshot 2024-07-24 094255" src="https://github.com/user-attachments/assets/08ffb955-39fd-4dd4-97ff-9a3846def5f7">
 <img width="660" alt="Screenshot 2024-07-23 225122" src="https://github.com/user-attachments/assets/074057d3-9857-4378-8d49-f79336ad6169">
 <img width="838" alt="Screenshot 2024-07-23 190619" src="https://github.com/user-attachments/assets/eef780c7-5daf-4e4d-bd8b-777962f2504b">
-![Screenshot 2024-07-24 095726](https://github.com/user-attachments/assets/e5989e3f-4e0e-406f-a16c-b6753264ebf9)
-![Screenshot 2024-07-22 210125](https://github.com/user-attachments/assets/6bc88612-9b0b-46ba-a55c-6aaf670c58b7)
+[Screenshot 2024-07-22 210125](https://github.com/user-attachments/assets/6bc88612-9b0b-46ba-a55c-6aaf670c58b7)
 <img width="936" alt="blog_api_index_2_2024-07-31 160926" src="https://github.com/user-attachments/assets/15335f3f-024d-4312-bced-0afc55e454f6">
 <img width="975" alt="blog_api_index_1_2024-07-31 160814" src="https://github.com/user-attachments/assets/4f319954-97bb-40ad-8d3b-0dbc8d21febe">
+[Screenshot 2024-07-24 095726](https://github.com/user-attachments/assets/e5989e3f-4e0e-406f-a16c-b6753264ebf9)
 
 

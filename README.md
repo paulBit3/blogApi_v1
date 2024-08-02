@@ -12,11 +12,12 @@
 Satisfied these requirements:
 ---
 - User login or Create an account to login
-- User Create, Update, View, and  Delete a post
-- User Logout
+- User Create, Update, View, and  Delete a blog post
+- User Logout from their account
 - APP display blog post created by user
--User can see blogs post on an index html page as well  by navigating to  http://127.0.0.1:8000
--Documented and tested using Swagger
+- User can see blogs post on an index html page as well by navigating to  http://127.0.0.1:8000
+- The API is tested using Postman and AdcvancedAPI tool
+- The API is Documented and tested using Swagger
 
 You can download it to your local or clone it  ```git clone: https://github.com/paulBit3/blogApi_v1.git```
 
@@ -43,7 +44,7 @@ http://127.0.0.1:8000/api/docs/#/
 After creating a post, it displays on the index page.
 In your browser, Navigate to http://127.0.0.1:8000
 
-Authentication Endpoint URI
+- Authentication Endpoint URI
 
 1- Signup
    http://127.0.0.1:8000/api/blog/auth/users/signup
@@ -55,7 +56,7 @@ Authentication Endpoint URI
    http://127.0.0.1:8000/api/blog/auth/users/logout
 
 
-Blog Endpoint URI
+- Blog Endpoint URI
 
 1- Create new post
    http://127.0.0.1:8000/api/blog/post

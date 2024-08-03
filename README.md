@@ -20,7 +20,9 @@ Satisfied these requirements:
 - The API is Documented and tested using Swagger
 
 You can download it to your local or clone it  ```git clone: https://github.com/paulBit3/blogApi_v1.git```
+Important
 
+You MUST access the locally run website through 127.0.0.1:3000 and NOT localhost:3000. This is because the CORS policy is configured to only allow requests from the exact domain 127.0.0.1:3000.
 ------
 
 --- Install Dependencies for the project:
